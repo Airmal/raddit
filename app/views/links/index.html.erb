@@ -16,6 +16,7 @@
       <tr>
         <td><%= link.title %></td>
         <td><%= link.url %></td>
+        <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
         <td><%= link_to 'Show', link %></td>
         <% if link.user == current_user %>
           <td><%= link_to 'Edit', edit_link_path(link) %></td>
